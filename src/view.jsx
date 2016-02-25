@@ -19,6 +19,7 @@ export default class View extends React.Component{
       value:props.value || "",
       onChange:props.onChange
     }
+    this.errText = props.errorText || "";
   }
   _onChangeHandle(event){
     this.setState({value:event.target.value});
@@ -29,7 +30,7 @@ export default class View extends React.Component{
   _onBlurHandle(event){
     let reg = /^[a-zA-Z0-9]+[a-zA-Z0-9\-\_]+@[A-Za-z0-9]+(.[a-zA-Z0-9]+)+$/g;
     if(!reg.test(event.target.value) && event.target.value.trim() !=""){
-      this.setState({errorText:"邮箱格式不正确"})
+      this.setState({errorText:this.errText==""?"邮箱格式不正确！":this.errText});
     }else{
       this.setState({errorText:""});
     }
