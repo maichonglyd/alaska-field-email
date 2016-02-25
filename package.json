@@ -1,0 +1,43 @@
+{
+  "name": "alaska-field-email",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib",
+    "watch": "babel ./src --out-dir ./lib -w",
+    "prebuild": "rimraf lib",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maichonglyd/alaska-field-email.git"
+  },
+  "keywords": [
+    "alaska",
+    "text"
+  ],
+  "author": {
+    "email": "li@maichong.it",
+    "name": "li",
+    "url": "https://github.com/maichonglyd"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maichonglyd/alaska-field-email/issues"
+  },
+  "homepage": "https://github.com/maichonglyd/alaska-field-email#readme",
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.5.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "rimraf": "^2.5.2"
+  },
+  "peerDependencies": {
+    "alaska": "*"
+  },
+  "dependencies": {
+    "material-ui": "^0.14.4"
+  }
+}
